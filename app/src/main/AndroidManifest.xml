@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="org.pocketworkstation.pckeyboard">
+        package="org.pocketworkstation.pckeyboard_epd">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
@@ -16,10 +16,11 @@
             android:killAfterRestore="false"
             android:icon="@drawable/icon">
 
-        <service android:name="LatinIME"
+        <service android:name="LatinIME_EPD"
                 android:label="@string/english_ime_name"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
+                    android:priority="100"
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
